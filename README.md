@@ -1,9 +1,10 @@
-The AutocadUpLoad add-in for excel allows you to download a short statement from a commercial offer. 
+Надстройка AutocadUpLoad для excel позволяет скачать краткую ведомость из коммерческого предложения для экспорта в Автокад.
 
-It consists of a standard add-in class in which variables of the active application, workbook, and worksheet are aggregated. It also contains methods subscribed to standard sheet events. 
+Надстройка состоит из: 
 
-The panel class contains methods subscribed to interface element events and private methods that are called by it. 
+-стандартного класса надстройки, в котором агрегируются переменные активного приложения, рабочей книги и рабочего листа. Он также содержит методы, подписанные на стандартные события листа.
+-класса панели, который содержит методы, подписанные на события элементов интерфейса, и вызываемые ими приватные методы.
+-файла «Commands», который содержит небольшую иерархию классов-функторов, выделяющих на листе ячейки, задействованные в программе. Форматирование этих ячеек можно сбросить до прежнего состояния.
+-файла "Loaders"с классом, в котором инкапсулирована логика создания excel-файла для выгрузки. Ведомость состоит из 3 столбцов: артикулы, названия и картинки.
 
-The "Commands" file contains a small hierarchy of classes-functors that highlight the cells involved in the program on the sheet. Their formatting can be reset to the previous state. 
-
-The "Loaders" file contains a class in which the logic of creating an excel file for unloading a statement is encapsulated. The statement consists of a column of articles, titles and pictures.
+При выгрузке ведомости также создаётся версия ведосомти в PDF, содержащая только картинки.
