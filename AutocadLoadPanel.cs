@@ -80,7 +80,8 @@ namespace AutocadUpLoad
                 }
                 if (count != cellsToDelete.Length)
                 {
-                    message = $"Ячейки в разделе {(char)34}Не выгружать{(char)34} должны быть в строках между первой и последней строкой раздела {(char)34}Первый столбец с текстом{(char)34}";
+                    message = $"Ячейки в разделе {(char)34}Не выгружать{(char)34} должны быть в строках " +
+                        $"между первой и последней строкой раздела {(char)34}Первый столбец с текстом{(char)34}";
                 }
             }
             return message;
@@ -164,7 +165,8 @@ namespace AutocadUpLoad
                 {
                     this.buildCommandCellsToUpload(ThisAddIn.activeWorksheet.get_Range(previousAddress));
                 }
-                commandsCellsToUpload.Add(new commandCellsToUpload(cell, $"Выгрузка в AutoCad:{(char)10}{ThisAddIn.sender.getEditBox().Label}"));
+                commandsCellsToUpload.Add(new commandCellsToUpload(cell, 
+                    $"Выгрузка в AutoCad:{(char)10}{ThisAddIn.sender.getEditBox().Label}"));
             }
             ThisAddIn.sender.hasAddress -= this.fillAddress;
             ThisAddIn.sender.disable();
@@ -474,10 +476,10 @@ namespace AutocadUpLoad
                 MessageBox.Show(ex.Message);
             }
         }
-        //TEST button, not vivible
+        //TEST button, not visible
         private void TEST_button_Click(object sender, RibbonControlEventArgs e)
         {
-            commandBordersReset cell = new commandBordersReset(ThisAddIn.thisApp.Selection);
+
         }
     }
 }

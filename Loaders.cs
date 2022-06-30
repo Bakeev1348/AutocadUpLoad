@@ -252,7 +252,7 @@ namespace AutocadUpLoad
                 }
                 this.copyImg(_originalSheet.Cells[_artCells[i].Row, _picCol.Column], i);
             }
-            //Сedit printrange and save
+            //edit printrange and save
             string firstAdd = _uploadSheet.Cells[1, 3].Address;
             string lastAdd = _uploadSheet.Cells[(_artCells.Length), 3].Address;
             string printRange = firstAdd + ":" + lastAdd;

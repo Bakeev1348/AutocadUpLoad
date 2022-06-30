@@ -55,7 +55,7 @@ namespace AutocadUpLoad
             _enabled = false;
             _add = false;
         }
-        //событие появления адреса ЗДЕСЬ
+        //hasAddress event HERE
         public void setAddress(string address)
         {
             _address = address;

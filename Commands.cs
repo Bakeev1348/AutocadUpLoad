@@ -32,7 +32,6 @@ namespace AutocadUpLoad
             _range = null;
             _bordersColor = System.Drawing.Color.Black;
             _bordersStyle = new int[4];
-            //_bordersWeight = new int[4];
             _newBordersColor = System.Drawing.Color.Black;
             _comment = null;
         }
@@ -41,12 +40,10 @@ namespace AutocadUpLoad
             _range = range;
             _bordersColor = System.Drawing.ColorTranslator.FromOle((int)_range.Borders.Color);
             _bordersStyle = new int[4];
-            //_bordersWeight = new int[4];
             for (int i = 0; i < 4; i++)
             {
                 Excel.XlBordersIndex currentBorder = (Excel.XlBordersIndex)(i + 7);
                 _bordersStyle[i] = (int)_range.Borders.Item[currentBorder].LineStyle;
-                //_bordersWeight[i] = (int)_range.Borders.Item[currentBorder].Weight;
             }
             _newBordersColor = System.Drawing.Color.Green;
             _comment = comment;
